@@ -77,7 +77,7 @@ int Xdf::load_xdf(std::string filename)
         }
 
         //for each chunk
-        while (1)
+        while (file.peek() != EOF)
         {
             uint64_t ChLen = readLength(file);//chunk length
 
